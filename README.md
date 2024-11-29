@@ -86,7 +86,7 @@ Otherwise, if you start the application using `npm run inf-prod` and open the re
 ## Final considerations
 
 Using this approach, we can concentrate on simplifying the development process, without affecting the deployment flows already in place for production.
-The main disadvantage is that we must have docker up and running, unless we decide to have a centralised instance of Infisical, but this would render the solution useless, because we would be forced to hide the `infisical.json`
+The main disadvantage is that we must have docker up and running, unless we decide to have a centralised instance of Infisical. In that case we should decide how to handle the `infisical.json`, that however DOESN'T contain any secret since they are stored elsewhere.
 
 ### Next steps
 
