@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "inf-dev": "infisical run --env=dev --path=/ -- next dev",
+    "inf-prod": "infisical run --env=prod --path=/ -- next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
