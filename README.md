@@ -14,13 +14,13 @@ This solution tries to solve 2 problems:
 
 ### Most relevant files
 
-`.env`: contains local environment variables
-`.infisical.json`: (to be created by the Infisical CLI) contains references to the Infisical instance to be used. This file should not be shared (or pushed), but since it points to a local Infisical instance, its leak can't affect anything unless the attacker has direct access to the user's machine
-`package.json`: contains 2 scripts where
+- `.env`: contains local environment variables
+- `.infisical.json`: (to be created by the Infisical CLI) contains references to the Infisical instance to be used. This file should not be shared (or pushed), but since it points to a local Infisical instance, its leak can't affect anything unless the attacker has direct access to the user's machine
+- `package.json`: contains 2 scripts where
     - Infisical retrieves all the secrets in its target instance (depending on the required dev or prod environment)
     - and injects them as environment variables
     - starts the application
-`src/app/page.tsx`: contains a chunk that prints the value of the `MY_SECRET` environment
+- `src/app/page.tsx`: contains a chunk that prints the value of the `MY_SECRET` environment
 
 Secrets retrieved by Infisical overwrite the variables of the .env values. For secrets non present in Infisical, a fallback will look in the .env file
 
